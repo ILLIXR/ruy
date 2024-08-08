@@ -416,7 +416,7 @@ elseif(CMAKE_SYSTEM_PROCESSOR STREQUAL s390 OR CMAKE_SYSTEM_PROCESSOR STREQUAL s
 elseif(CMAKE_SYSTEM_NAME STREQUAL Fuchsia)
   set(ruy_6_cpuinfo_cpuinfo "")
 else()
-  set(ruy_6_cpuinfo_cpuinfo "cpuinfo::cpuinfo")
+  set(ruy_6_cpuinfo_cpuinfo "cpuinfo")
 endif()
 
 ruy_cc_library(
