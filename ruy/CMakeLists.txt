@@ -253,7 +253,7 @@ ruy_cc_test(
     ruy_mat
     ruy_matrix
     ruy_prepacked_cache
-    ruy
+    ruy_hdr
     ruy_time
 )
 
@@ -1220,7 +1220,7 @@ ruy_cc_library(
 
 ruy_cc_library(
   NAME
-    ruy
+    ruy_hdr
   HDRS
     context.h
     matrix.h
@@ -1262,7 +1262,7 @@ ruy_cc_test(
     ruy_matrix
     ruy_path
     ruy_performance_advisory
-    ruy
+    ruy_hdr
 )
 
 ruy_cc_library(
@@ -1321,7 +1321,7 @@ ruy_cc_library(
     ruy_reference_mul
     ruy_matrix
     ruy_pmu
-    ruy
+    ruy_hdr
     ruy_mul_params
     ruy_time
     ruy_gtest_wrapper
@@ -1836,7 +1836,7 @@ ruy_cc_test(
     ruy_gtest_wrapper
     ruy_matrix
     ruy_path
-    ruy
+    ruy_hdr
     ruy_test_lib
     ruy_tune
 )
