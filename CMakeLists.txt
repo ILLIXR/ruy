@@ -14,7 +14,10 @@
 
 cmake_policy(SET CMP0012 NEW)
 cmake_policy(SET CMP0048 NEW)
-cmake_minimum_required(VERSION 3.13)  # Copied from IREE
+cmake_minimum_required(VERSION 3.13) # Copied from IREE
+if (POLICY CMP0126)
+    cmake_policy(SET CMP0126 NEW)
+endif()
 project(ruy CXX)
 set(CMAKE_CXX_STANDARD 14)
 
