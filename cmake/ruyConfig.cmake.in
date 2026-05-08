@@ -16,7 +16,7 @@ if(TARGET ruy)
         )
     endif()
     set(ruy_FOUND TRUE)
-    set(ruy_LIBRARIES ruy::ruy
+    set(ruy_LIBRARIES ruy::ruy)
 
     get_target_property(_ruy_inc ruy INTERFACE_INCLUDE_DIRECTORIES)
     set(ruy_INCLUDE_DIRS "${_ruy_inc}")
