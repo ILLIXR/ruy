@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 # FetchContent / add_subdirectory mode
 # ---------------------------------------------------------------
-if(TARGET ruy)
+if(TARGET ruy_frontend)
     if(NOT TARGET ruy::ruy)
         # Use IMPORTED INTERFACE, not ALIAS.
         # An ALIAS to a real target causes install(EXPORT) to require
@@ -12,13 +12,13 @@ if(TARGET ruy)
         # An IMPORTED target is treated as external and exempt from that check.
         add_library(ruy::ruy INTERFACE IMPORTED GLOBAL)
         set_target_properties(ruy::ruy PROPERTIES
-            INTERFACE_LINK_LIBRARIES "ruy"
+            INTERFACE_LINK_LIBRARIES "$<BUILD_INTERFACE:ruy_frontend>"
         )
     endif()
     set(ruy_FOUND TRUE)
     set(ruy_LIBRARIES ruy::ruy)
 
-    get_target_property(_ruy_inc ruy INTERFACE_INCLUDE_DIRECTORIES)
+    get_target_property(_ruy_inc ruy_frontend INTERFACE_INCLUDE_DIRECTORIES)
     set(ruy_INCLUDE_DIRS "${_ruy_inc}")
 
     return()
